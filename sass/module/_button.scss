@@ -1,0 +1,30 @@
+@use 'global';
+
+.button-wrap {
+    text-align: center;
+}
+
+.link-button {
+    width: 150px;
+    padding: 12px 0;
+    display: inline-block;
+    border: 1px solid global.$button-border-color;
+    text-align: center;
+    font-size: global.rem(16);
+
+    @include global.mq(global.$tab-size) {
+        width: 300px;
+        padding: 24px 0;
+    }
+
+    @include global.mq(global.$sp-size) {
+        width: 100%;
+    }
+}
+
+.link-button {
+    &:hover {
+        background-color: global.$button-hover-color;
+        color: global.$main-color;
+    }
+}

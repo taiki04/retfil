@@ -1,0 +1,12 @@
+// responsive
+
+$pc-size: 1280px;
+$tab-size: 1080px;
+$tab-size2: 1160px;
+$sp-size: 768px;
+
+@mixin mq($breakpoint) {
+    @media screen and(max-width: $breakpoint) {
+        @content;
+    }
+};

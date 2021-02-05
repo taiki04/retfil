@@ -1,0 +1,78 @@
+@use 'global';
+
+.about {
+    position: relative;
+    z-index: 0;
+    height: 700px;
+
+    @include global.mq(global.$sp-size) {
+        height: 600px;
+    }
+}
+
+.about-bg {
+    background-color: global.$sub-color;
+}
+
+.about-inner {
+    position: absolute;
+    z-index: 1;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-title,
+.about-text {
+    writing-mode: vertical-rl;
+    letter-spacing: .2em;
+}
+
+.about-title {
+    margin-left: 140px;
+    line-height: 1.2;
+    font-size: global.rem(40);
+    font-family: global.$font-tsukuba;
+    font-weight: global.$font-weight-bold;
+    order: 2;
+
+    & > span {
+        margin-bottom: -20px;
+        display: inline-block;
+    }
+
+    @include global.mq(global.$tab-size) {
+        margin-left: 100px;
+        font-size: global.rem(36);
+    }
+
+    @include global.mq(global.$sp-size) {
+        margin-left: 60px;
+        font-size: global.rem(32);
+    }
+}
+
+.about-text {
+    order: 1;
+
+    span {
+        display: block;
+
+        &:not(:last-child) {
+            margin-left: 80px;
+
+            @include global.mq(global.$tab-size) {
+                margin-left: 60px;
+            }
+
+            @include global.mq(global.$sp-size) {
+                margin-left: 40px;
+            }
+        }
+    }
+
+}

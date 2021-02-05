@@ -1,0 +1,160 @@
+@use 'global';
+
+.footer-inner {
+    padding: 20px 40px 40px;
+
+    @include global.mq(global.$sp-size) {
+        padding: 20px;
+    }
+}
+
+.footer-head {
+    margin-bottom: 100px;
+    display: flex;
+
+    @include global.mq(global.$sp-size) {
+        margin-bottom: 80px;
+        flex-direction: column;
+    }
+}
+
+.footer-title {
+    letter-spacing: 0.08em;
+    font-family: global.$font-lato;
+    font-size: global.rem(30);
+
+    @include global.mq(global.$sp-size) {
+        margin-bottom: 40px;
+    }
+}
+
+.footer-title--main,
+.footer-title--lead {
+    display: block;
+}
+
+.footer-title--main {
+    margin-bottom: 16px;
+
+    @include global.mq(global.$sp-size) {
+        margin-bottom: 12px;
+    }
+}
+
+.footer-title--lead {
+    font-family: global.$font-honoka;
+    font-size: global.rem(12);
+    letter-spacing: 0.1em;
+}
+
+.footer-area {
+    margin-left: auto;
+
+    @include global.mq(global.$sp-size) {
+        margin-left: 0;
+    }
+}
+
+.footer-area-inner {
+    display: flex;
+
+    @include global.mq(global.$sp-size) {
+        flex-direction: column;
+    }
+}
+
+.footer-menu {
+
+    & + & {
+        margin-left: 48px;
+
+        @include global.mq(global.$tab-size) {
+            margin-left: 28px;
+        }
+    }
+
+    & > span {
+        margin-bottom: 16px;
+        display: block;
+        letter-spacing: 0.05em;
+        font-family: global.$font-tsukuba;
+        font-weight: global.$font-weight-bold;
+        font-size: global.rem(14);
+    }
+
+    @include global.mq(global.$sp-size) {
+
+        & + & {
+            margin-left: 0;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.footer-list--item {
+    font-weight: global.$font-weight-bold;
+    font-size: global.rem(12);
+
+    &:not(:last-child) {
+        margin-bottom: 12px;
+    }
+}
+
+.footer-foot {
+    text-align: center;
+
+    @include global.mq(global.$sp-size) {
+        text-align: left;
+    }
+}
+
+.address-wrap {
+    margin-bottom: 16px;
+}
+
+.address {
+    letter-spacing: 0.05em;
+
+    & > span {
+        display: inline-block;
+        margin-right: 10px;
+
+        @include global.mq(global.$sp-size) {
+            margin-bottom: 8px;
+        }
+    }
+
+    & > br {
+        display: none;
+
+        @include global.mq(global.$sp-size) {
+            display: block;
+        }
+    }
+}
+
+.sns-list {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+
+    & > li {
+        
+        &:not(:first-child) {
+            margin-left: 24px;
+        } 
+    }
+
+    @include global.mq(global.$sp-size) {
+        justify-content: left;
+    }
+}
+
+.copyright {
+    letter-spacing: 0.05em;
+    font-family: global.$font-lato;
+    font-size: global.rem(12);
+}

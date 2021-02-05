@@ -1,0 +1,38 @@
+@use 'global';
+
+#content-wrapper {
+    overflow: hidden;
+}
+
+.inner {
+    max-width: 1180px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 40px;
+    padding-left: 40px;
+
+    @include global.mq(global.$sp-size) {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+
+.content-inner {
+    display: flex;
+
+    @include global.mq(global.$sp-size) {
+        flex-direction: column;
+    }
+}
+
+.content-mb {
+    margin-bottom: global.$layout-space-pc;
+
+    @include global.mq(global.$tab-size) {
+        margin-bottom: global.$layout-space-tab;
+    }
+
+    @include global.mq(global.$sp-size) {
+        margin-bottom: global.$layout-space-sp;
+    }
+}

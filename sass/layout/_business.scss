@@ -1,0 +1,133 @@
+@use 'global';
+
+.business {
+    position: relative;
+    z-index: 0;
+}
+
+.business-bg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    background-color: global.$sub-color;
+    width: 86vw;
+    height: 100%;
+
+    @include global.mq(global.$sp-size) {
+        width: 100%;
+    }
+}
+
+.business-inner {
+    padding: 80px 40px;
+}
+
+.business-title {
+    flex: 0 1 25%;
+    margin-right: 80px;
+
+    @include global.mq(global.$sp-size) {
+        flex: 1;
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+}
+
+.business-content-wrap {
+    flex: 0 1 75%;
+
+    @include global.mq(global.$sp-size) {
+        flex: 1;
+    }
+}
+
+.business-content-inner {
+    display: flex;
+
+    &:not(:last-child) {
+        margin-bottom: 160px;
+    }
+
+    @include global.mq(global.$tab-size2) {
+        flex-direction: column;
+    }
+
+    @include global.mq(global.$sp-size) {
+
+        &:not(:last-child) {
+            margin-bottom: 80px;
+        }
+    }
+}
+
+.flex-reserved {
+
+    @include global.mq(global.$tab-size2) {
+        flex-direction: column-reverse;
+    }
+}
+
+.business-image {
+    flex: 0 0 404px;
+
+    @include global.mq(global.$tab-size2) {
+        flex: 1;
+        margin-bottom: 40px;
+    }
+}
+
+.business-body {
+    padding-top: 4px;
+    display: flex;
+
+    @include global.mq(global.$tab-size2) {
+        padding-top: 0;
+    }
+}
+
+.business-heading {
+    position: relative;
+    font-family: global.$font-tsukuba;
+    font-weight: global.$font-weight-bold;
+    font-size:  global.rem(30);
+    writing-mode: vertical-rl;
+
+    @include global.mq(global.$tab-size2) {
+        flex: 0 1 20%;
+        font-size: global.rem(28);
+
+        & > span {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    @include global.mq(global.$sp-size) {
+        font-size: global.rem(26);
+    }
+}
+
+.business-content {
+    margin: 0 48px;
+
+    @include global.mq(global.$tab-size2) {
+        flex: 0 1 80%;
+        margin: 0;
+    }
+}
+
+.business-content--head {
+    margin-bottom: 34px;
+}
+
+.business-text {
+    line-height: 2.2;
+    letter-spacing: 0.1em;
+    text-align: justify;
+}
+
+.business-button-wrap {
+    text-align: left;
+}

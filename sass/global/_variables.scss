@@ -1,0 +1,50 @@
+// color
+$main-color: #fcfcfc;
+$sub-color: #EDECE6;
+$accent-color: #C97109;
+$button-hover-color :#3a3a3a;
+$drawer-button-color: #3a3a3a;
+$drawer-back-color: rgba(0,0,0,0.6);
+
+
+// font
+@font-face {
+    font-family: 'honoka';
+    src: url(/font/honokamaru.woff) format('woff'),
+        url(/font/honokamaru.woff2) format('woff2');
+}
+$font-family: Noto Sans CJK JP, "游ゴシック", "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+$font-tsukuba: fot-tsukuardgothic-std, sans-serif;
+$font-honoka: 'honoka', sans-serif;
+$font-lato: 'Lato', sans-serif;
+$font-style: normal;
+$font-weight-normal: 500;
+$font-weight-bold: 700;
+
+// font-color
+$font-color: #3a3a3a;
+$accent-font-color: #fcfcfc;
+
+// font-size
+$baseFontSize: 16;
+
+@function rem($pixels, $context: $baseFontSize) {
+    @return $pixels / $context * 1rem;
+}
+
+
+// border-color
+$border-color: #3a3a3a;
+$button-border-color: #3a3a3a;
+
+// hover
+$hover: .3s;
+
+// layout
+$layout-space-pc: 240px;
+$layout-space-tab: 180px;
+$layout-space-sp: 120px;
+
+
+// overlay
+$overlay: rgba(0,0,0,0.2);
